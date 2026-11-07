@@ -9,7 +9,7 @@ from pathlib import Path
 
 from evaluate_metrics import THRESHOLDS, derive_issues, evaluate_metrics
 
-GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite").strip()
 SAMPLE_LOG = Path(__file__).with_name("sample-log.json")
 SYSTEM_PROMPT = """
 You assist engineers evaluating traffic-sign and lane-marking perception
@@ -98,7 +98,7 @@ def evaluate_prompt(user_input: str) -> str:
     api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
     if not api_key:
         raise RuntimeError("Set GEMINI_API_KEY or GOOGLE_API_KEY.")
-    with genai.Client(api_key=api_key, http_options=types.HttpOptions(timeout=15000)) as client:
+    with genai.Client(api_key=api_key, http_options=types.HttpOptions(timeout=30000)) as client:
         response = client.models.generate_content(
             model=GEMINI_MODEL,
             contents=user_input,
@@ -106,8 +106,6 @@ def evaluate_prompt(user_input: str) -> str:
                 system_instruction=SYSTEM_PROMPT,
                 response_mime_type="application/json",
                 response_schema=RESPONSE_SCHEMA,
-                temperature=0,
-                thinking_config=types.ThinkingConfig(thinking_budget=0),
             ),
         )
     if not response.text:
@@ -218,6 +216,9 @@ def run_live(metrics, cases):
             failures += 1
             record["result"] = "Failed"
             record["reason"] = str(error) if isinstance(error, ValueError) else type(error).__name__
+            code = getattr(error, "code", None)
+            if isinstance(code, (int, str)):
+                record["api_error_code"] = code
             record["fallback"] = "Use the Python metrics and original frames for engineer review."
         print_json(record)
     return int(failures > 0)
