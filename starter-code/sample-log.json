@@ -1,0 +1,217 @@
+{
+  "clip_id": "SYNTHETIC-01",
+  "data_source": "synthetic",
+  "sign_classes": [
+    "no_left_turn",
+    "stop"
+  ],
+  "frames": [
+    {
+      "frame_id": "F1",
+      "capture_ms": 0,
+      "available_ms": 60,
+      "reference_signs": [
+        {
+          "label": "no_left_turn",
+          "bbox": [
+            0.1,
+            0.1,
+            0.2,
+            0.3
+          ],
+          "instance_id": "S1",
+          "first_readable_ms": 0
+        }
+      ],
+      "predicted_signs": [
+        {
+          "label": "stop",
+          "bbox": [
+            0.1,
+            0.1,
+            0.2,
+            0.3
+          ]
+        }
+      ],
+      "reference_lanes": {
+        "left": [
+          0.3,
+          0.25,
+          0.2
+        ],
+        "right": [
+          0.7,
+          0.75,
+          0.8
+        ]
+      },
+      "predicted_lanes": {
+        "left": [
+          0.3,
+          0.25,
+          0.2
+        ],
+        "right": [
+          0.7,
+          0.75,
+          0.8
+        ]
+      }
+    },
+    {
+      "frame_id": "F2",
+      "capture_ms": 40,
+      "available_ms": 180,
+      "reference_signs": [
+        {
+          "label": "no_left_turn",
+          "bbox": [
+            0.1,
+            0.1,
+            0.2,
+            0.3
+          ],
+          "instance_id": "S1",
+          "first_readable_ms": 0
+        }
+      ],
+      "predicted_signs": [],
+      "reference_lanes": {
+        "left": [
+          0.3,
+          0.25,
+          0.2
+        ],
+        "right": [
+          0.7,
+          0.75,
+          0.8
+        ]
+      },
+      "predicted_lanes": {
+        "left": [
+          0.3,
+          0.25,
+          0.2
+        ],
+        "right": null
+      }
+    },
+    {
+      "frame_id": "F3",
+      "capture_ms": 1100,
+      "available_ms": 1180,
+      "reference_signs": [
+        {
+          "label": "no_left_turn",
+          "bbox": [
+            0.1,
+            0.1,
+            0.2,
+            0.3
+          ],
+          "instance_id": "S1",
+          "first_readable_ms": 0
+        }
+      ],
+      "predicted_signs": [
+        {
+          "label": "no_left_turn",
+          "bbox": [
+            0.1,
+            0.1,
+            0.2,
+            0.3
+          ]
+        },
+        {
+          "label": "no_left_turn",
+          "bbox": [
+            0.1,
+            0.1,
+            0.2,
+            0.3
+          ]
+        }
+      ],
+      "reference_lanes": {
+        "left": [
+          0.3,
+          0.25,
+          0.2
+        ],
+        "right": [
+          0.7,
+          0.75,
+          0.8
+        ]
+      },
+      "predicted_lanes": {
+        "left": [
+          0.3,
+          0.25,
+          0.2
+        ],
+        "right": [
+          0.7,
+          0.75,
+          0.8
+        ]
+      }
+    },
+    {
+      "frame_id": "F4",
+      "capture_ms": 2000,
+      "available_ms": 2150,
+      "reference_signs": [
+        {
+          "label": "stop",
+          "bbox": [
+            0.1,
+            0.1,
+            0.2,
+            0.3
+          ],
+          "instance_id": "S2",
+          "first_readable_ms": 2000
+        }
+      ],
+      "predicted_signs": [
+        {
+          "label": "stop",
+          "bbox": [
+            0.1,
+            0.1,
+            0.2,
+            0.3
+          ]
+        }
+      ],
+      "reference_lanes": {
+        "left": [
+          0.3,
+          0.25,
+          0.2
+        ],
+        "right": [
+          0.7,
+          0.75,
+          0.8
+        ]
+      },
+      "predicted_lanes": {
+        "left": [
+          0.3,
+          0.25,
+          0.2
+        ],
+        "right": [
+          0.7,
+          0.75,
+          0.8
+        ]
+      }
+    }
+  ]
+}
