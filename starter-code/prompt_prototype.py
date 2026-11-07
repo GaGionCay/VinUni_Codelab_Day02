@@ -5,7 +5,11 @@ import copy
 import json
 import math
 import os
+import sys
 from pathlib import Path
+
+# Hỗ trợ autograder nạp file từ ngoài thư mục starter-code.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from evaluate_metrics import THRESHOLDS, derive_issues, evaluate_metrics
 
