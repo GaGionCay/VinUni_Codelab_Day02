@@ -47,6 +47,7 @@ Tôi là **Ánh**, **AI Product Engineer** tại **Vin Smart Future** đang tìm
 │ Quick Architecture: [x] LLM Feature (RAG Copilot tra cứu & chẩn đoán)   │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
+```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │ QUICK PROBLEM CARD #2                                                   │
 │                                                                         │
@@ -75,6 +76,7 @@ Tôi là **Ánh**, **AI Product Engineer** tại **Vin Smart Future** đang tìm
 │                                                                         │
 │ Quick Architecture: [x] Predictive Model / Vision AI (Video Analytics)  │
 └─────────────────────────────────────────────────────────────────────────┘
+```
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │ QUICK PROBLEM CARD #3                                                   │
